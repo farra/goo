@@ -2504,3 +2504,15 @@ Processing CountsController#create to js (for 127.0.0.1 at 2009-10-05 05:17:50) 
   [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
   [4;36;1mCount Update (0.5ms)[0m   [0;1mUPDATE "counts" SET "total" = 62, "updated_at" = '2009-10-04 21:17:50' WHERE "id" = 1[0m
 Completed in 12ms (View: 1, DB: 1) | 200 OK [http://goo.local/count.js]
+
+
+Processing CountsController#create to js (for 127.0.0.1 at 2009-10-05 05:18:48) [POST]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+  [4;36;1mCount Update (0.5ms)[0m   [0;1mUPDATE "counts" SET "total" = 63, "updated_at" = '2009-10-04 21:18:48' WHERE "id" = 1[0m
+Completed in 14ms (View: 1, DB: 1) | 200 OK [http://goo.local/count.js]
+
+
+Processing CountsController#create to js (for 127.0.0.1 at 2009-10-05 05:18:50) [POST]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+  [4;36;1mCount Update (0.4ms)[0m   [0;1mUPDATE "counts" SET "total" = 64, "updated_at" = '2009-10-04 21:18:50' WHERE "id" = 1[0m
+Completed in 11ms (View: 1, DB: 1) | 200 OK [http://goo.local/count.js]

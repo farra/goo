@@ -6,14 +6,18 @@ This application was created to debug rails, nanite, nanite-plugin, rufus-schedu
 
  - git clone this repo
  - setup rabbitmq if necessary (see http://github.com/ezmobius/nanite)
- - make sure you setup rabbitmq permissions (can try running "rake nanite:rabbitmq" as root)
+ - make sure you setup rabbitmq permissions (can try running `rake nanite:rabbitmq` as root)
  - run the rails app.  I use passenger, so I setup a new vhost like this:
-    <VirtualHost *:80>
-      ServerName goo.local
-      DocumentRoot /Users/farra/dev/goo/public
-    </VirtualHost>
+
+     <VirtualHost *:80>
+       ServerName goo.local
+       DocumentRoot /Users/farra/dev/goo/public
+     </VirtualHost>
+
  - run the counter nanite agent:
+
     ./script/nanite -a counter start
+
  - visit the website at http://goo.local (or http://localhost:3000 if you use that)
 
 ## What?
