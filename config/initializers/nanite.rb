@@ -4,7 +4,8 @@ def load_mapper_opts
   YAML::load(ERB.new(IO.read(RAILS_ROOT+"/config/nanite/mapper.yml")).result)[ENV["RAILS_ENV"] || "development"]
 end
 
-AMQP.logging = true
+# Uncomment for AMQP logging
+# AMQP.logging = true
 
 def start_mapper_on_passenger
   logger = RAILS_DEFAULT_LOGGER
