@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>Rails-Rufus-Nanite Test</title>
+  </head>
+
+  <body>
+    <h1>Rails-Rufus-Nanite Test</h1>
+    <hr/>
+    <h3>Current Count</h3>
+    <p>
+      <%= @count.total %>
+    </p>
+    <h3>Manually Increment</h3>
+    <% form_for :count, :url => count_path  do |form| %>
+      <%= submit_tag "Increment" %>
+    <% end %>
+
+    <h3>Async Increment</h3>
+    <% form_for :count, :url => async_increment_count_path do |form| %>
+      <%= submit_tag "Increment" %>
+      <%= link_to "Refresh this page", root_path %>
+    <% end %>
+    <h3>Schedule Increment</h3>
+    <% form_for @count, :url => schedule_count_path do |form| %>
+       <%= form.select :interval, [1,*(5..60).step(5).to_a].collect {|m|["#{m} minutes",m.minutes]} %>
+      <%= submit_tag "Increment" %>                    
+    <% end %>
+    
+  </body>
+
+</html>

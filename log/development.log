@@ -1,0 +1,1629 @@
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.8ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCounts (20091004191553)
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCREATE TABLE "counts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "total" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091004191553')[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("counts")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (98.1ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (64.1ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (9.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCounts (20091004191553)
+  [4;36;1mSQL (20.7ms)[0m   [0;1mCREATE TABLE "counts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "total" integer, "interval" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091004191553')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("counts")[0m
+Starting Nanite mapper on Passenger...
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-05 03:39:54) [GET]
+
+SyntaxError (/Users/farra/dev/goo/app/controllers/count_controller.rb:8: syntax error, unexpected tASSOC, expecting '}'
+      @count = Count.new {:total => 0}
+                                   ^):
+  /opt/local/src/passenger/lib/phusion_passenger/rack/request_handler.rb:95:in `process_request'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:378:in `start_request_handler'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:336:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/utils.rb:183:in `safe_fork'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:163:in `start'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (32.0ms)
+Rendered rescues/_request_and_response (2.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CountController#index (for 127.0.0.1 at 2009-10-05 03:40:21) [GET]
+  [4;36;1mCount Load (0.8ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+  [4;35;1mCount Create (0.7ms)[0m   [0mINSERT INTO "counts" ("updated_at", "total", "interval", "created_at") VALUES('2009-10-04 19:40:21', 0, NULL, '2009-10-04 19:40:21')[0m
+Rendering count/index
+
+ActionView::TemplateError (undefined method `toggle_autopub' for #<ActionView::Base:0x266b8ac>) on line #21 of app/views/count/index.html.erb:
+18:     <h3>Schedule Increment</h3>
+19:     <% form_for @count, :url => schedule_count_path do |form| %>
+20:        <%= form.select :interval, [1,*(5..60).step(5).to_a].collect {|m|["#{m} minutes",m.minutes]}, {}, 
+21:                        toggle_autopub(form.object) %>
+22:       <%= submit_tag "Increment" %>                    
+23:     <% end %>
+24:     
+
+    app/views/count/index.html.erb:21
+    app/views/count/index.html.erb:19
+    /opt/local/src/passenger/lib/phusion_passenger/rack/request_handler.rb:95:in `process_request'
+    /opt/local/src/passenger/lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+    /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:378:in `start_request_handler'
+    /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:336:in `handle_spawn_application'
+    /opt/local/src/passenger/lib/phusion_passenger/utils.rb:183:in `safe_fork'
+    /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+    /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+    /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:163:in `start'
+    /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+    /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+    /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+    /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+    /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+    /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+    /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+    /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+    /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+    /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (101.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CountController#index (for 127.0.0.1 at 2009-10-05 03:40:40) [GET]
+  [4;36;1mCount Load (0.7ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering count/index
+Completed in 19ms (View: 12, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountController#index (for 127.0.0.1 at 2009-10-05 03:40:42) [GET]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+Rendering count/index
+Completed in 11ms (View: 7, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing ApplicationController#update to #<count:0x25ee474> (for 127.0.0.1 at 2009-10-05 03:40:44) [PUT]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"BwgZgQ0AEAw6JKsYsM/VGomIdA8J2TERj0tI2hcVxWY="}
+
+NameError (uninitialized constant CountsController):
+  /opt/local/src/passenger/lib/phusion_passenger/rack/request_handler.rb:95:in `process_request'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:378:in `start_request_handler'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:336:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/utils.rb:183:in `safe_fork'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:163:in `start'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (21.1ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CountController#index (for 127.0.0.1 at 2009-10-05 03:41:15) [GET]
+  [4;36;1mCount Load (0.6ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering count/index
+Completed in 19ms (View: 13, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountController#index (for 127.0.0.1 at 2009-10-05 03:42:27) [GET]
+  [4;35;1mCount Load (1.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+Rendering count/index
+Completed in 91ms (View: 84, DB: 2) | 200 OK [http://goo.local/]
+
+
+Processing CountController#index (for 127.0.0.1 at 2009-10-05 03:44:15) [GET]
+  [4;36;1mCount Load (0.7ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering count/index
+Completed in 19ms (View: 12, DB: 1) | 200 OK [http://goo.local/]
+  [4;36;1mCount Load (0.8ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+  [4;35;1mCount Update (2.9ms)[0m   [0mUPDATE "counts" SET "total" = 1, "updated_at" = '2009-10-04 19:45:04' WHERE "id" = 1[0m
+
+
+Processing CountController#index (for 127.0.0.1 at 2009-10-05 03:45:07) [GET]
+  [4;35;1mCount Load (0.7ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+Rendering count/index
+Completed in 13ms (View: 7, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountController#index (for 127.0.0.1 at 2009-10-05 03:45:28) [GET]
+  [4;36;1mCount Load (0.6ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering count/index
+Completed in 13ms (View: 7, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing ApplicationController#update to #<count:0x258aac8> (for 127.0.0.1 at 2009-10-05 03:45:29) [PUT]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"BwgZgQ0AEAw6JKsYsM/VGomIdA8J2TERj0tI2hcVxWY="}
+
+NameError (uninitialized constant CountsController):
+  /opt/local/src/passenger/lib/phusion_passenger/rack/request_handler.rb:95:in `process_request'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:378:in `start_request_handler'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:336:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/utils.rb:183:in `safe_fork'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:163:in `start'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (24.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CountController#index (for 127.0.0.1 at 2009-10-05 03:45:56) [GET]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+Rendering count/index
+Completed in 13ms (View: 7, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing ApplicationController#update to #<count:0x246687c> (for 127.0.0.1 at 2009-10-05 03:45:58) [PUT]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"BwgZgQ0AEAw6JKsYsM/VGomIdA8J2TERj0tI2hcVxWY="}
+
+NameError (uninitialized constant CountsController):
+  /opt/local/src/passenger/lib/phusion_passenger/rack/request_handler.rb:95:in `process_request'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:378:in `start_request_handler'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:336:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/utils.rb:183:in `safe_fork'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:163:in `start'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (90.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#update to js (for 127.0.0.1 at 2009-10-05 03:48:31) [PUT]
+  Parameters: {"a"=>"b"}
+
+NameError (uninitialized constant CountsController):
+  /opt/local/src/passenger/lib/phusion_passenger/rack/request_handler.rb:95:in `process_request'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:378:in `start_request_handler'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:336:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/utils.rb:183:in `safe_fork'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:163:in `start'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (21.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CountsController#update to js (for 127.0.0.1 at 2009-10-05 03:49:21) [PUT]
+  Parameters: {"a"=>"b"}
+
+ActiveRecord::RecordNotFound (Couldn't find Count without an ID):
+  app/controllers/counts_controller.rb:14:in `update'
+  /opt/local/src/passenger/lib/phusion_passenger/rack/request_handler.rb:95:in `process_request'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:378:in `start_request_handler'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:336:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/utils.rb:183:in `safe_fork'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:163:in `start'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (30.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+Starting Nanite mapper on Passenger...
+
+
+Processing CountsController#update to js (for 127.0.0.1 at 2009-10-05 03:49:31) [PUT]
+  Parameters: {"a"=>"b"}
+
+ActiveRecord::RecordNotFound (Couldn't find Count without an ID):
+  app/controllers/counts_controller.rb:14:in `update'
+  /opt/local/src/passenger/lib/phusion_passenger/rack/request_handler.rb:95:in `process_request'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:378:in `start_request_handler'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:336:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/utils.rb:183:in `safe_fork'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:163:in `start'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (30.7ms)
+Rendered rescues/_request_and_response (2.5ms)
+Rendering rescues/layout (not_found)
+
+
+Processing CountsController#update to js (for 127.0.0.1 at 2009-10-05 03:49:50) [PUT]
+  Parameters: {"a"=>"b"}
+  [4;36;1mCount Load (0.9ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+  [4;35;1mCount Update (0.7ms)[0m   [0mUPDATE "counts" SET "total" = 2, "updated_at" = '2009-10-04 19:49:50' WHERE "id" = 1[0m
+Completed in 21ms (View: 1, DB: 2) | 200 OK [http://goo.local/count.js]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-05 03:49:58) [GET]
+
+NameError (uninitialized constant CountController):
+  /opt/local/src/passenger/lib/phusion_passenger/rack/request_handler.rb:95:in `process_request'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:378:in `start_request_handler'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:336:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/utils.rb:183:in `safe_fork'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:163:in `start'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (25.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 03:50:11) [GET]
+  [4;36;1mCount Load (1.1ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+
+ActionView::MissingTemplate (Missing template counts/index.erb in view path app/views):
+  /opt/local/src/passenger/lib/phusion_passenger/rack/request_handler.rb:95:in `process_request'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:378:in `start_request_handler'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:336:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/utils.rb:183:in `safe_fork'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:163:in `start'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 03:50:29) [GET]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 21ms (View: 15, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 03:50:47) [GET]
+  [4;36;1mCount Load (0.9ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 12ms (View: 6, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#update to #<count:0x21af890> (for 127.0.0.1 at 2009-10-05 03:50:48) [PUT]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"BwgZgQ0AEAw6JKsYsM/VGomIdA8J2TERj0tI2hcVxWY="}
+  [4;35;1mCount Load (1.3ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+  [4;36;1mCount Update (0.5ms)[0m   [0;1mUPDATE "counts" SET "total" = 3, "updated_at" = '2009-10-04 19:50:48' WHERE "id" = 1[0m
+Completed in 86ms (View: 1, DB: 2) | 406 Not Acceptable [http://goo.local/count.#<count:0x21af890>]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 03:50:53) [GET]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 13ms (View: 7, DB: 1) | 200 OK [http://goo.local/]
+Starting Nanite mapper on Passenger...
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 03:51:49) [GET]
+  [4;36;1mCount Load (0.9ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 52ms (View: 44, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 03:52:09) [GET]
+  [4;35;1mCount Load (0.7ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 15ms (View: 8, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 03:52:15) [GET]
+  [4;36;1mCount Load (0.6ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 13ms (View: 7, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 03:52:18) [GET]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 03:53:01) [GET]
+  [4;36;1mCount Load (0.7ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 21ms (View: 11, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 03:53:17) [POST]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"BwgZgQ0AEAw6JKsYsM/VGomIdA8J2TERj0tI2hcVxWY="}
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 9ms (View: 5, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 03:53:25) [GET]
+  [4;36;1mCount Load (0.6ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 12ms (View: 6, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 03:53:28) [POST]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"BwgZgQ0AEAw6JKsYsM/VGomIdA8J2TERj0tI2hcVxWY="}
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 03:53:56) [GET]
+  [4;36;1mCount Load (0.6ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 18ms (View: 11, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 03:54:53) [GET]
+  [4;35;1mCount Load (0.7ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 18ms (View: 13, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 03:55:02) [PUT]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"BwgZgQ0AEAw6JKsYsM/VGomIdA8J2TERj0tI2hcVxWY="}
+  [4;36;1mCount Load (0.6ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 83ms (View: 78, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 03:55:07) [PUT]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"BwgZgQ0AEAw6JKsYsM/VGomIdA8J2TERj0tI2hcVxWY="}
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 11ms (View: 5, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 03:55:53) [GET]
+  [4;36;1mCount Load (0.6ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 15ms (View: 10, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#update (for 127.0.0.1 at 2009-10-05 03:55:59) [PUT]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"BwgZgQ0AEAw6JKsYsM/VGomIdA8J2TERj0tI2hcVxWY="}
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+  [4;36;1mCount Update (0.7ms)[0m   [0;1mUPDATE "counts" SET "total" = 4, "updated_at" = '2009-10-04 19:55:59' WHERE "id" = 1[0m
+Redirected to http://goo.local/
+Completed in 12ms (DB: 1) | 302 Found [http://goo.local/count]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 03:56:00) [GET]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#update (for 127.0.0.1 at 2009-10-05 03:56:01) [PUT]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"BwgZgQ0AEAw6JKsYsM/VGomIdA8J2TERj0tI2hcVxWY="}
+  [4;36;1mCount Load (0.6ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+  [4;35;1mCount Update (0.5ms)[0m   [0mUPDATE "counts" SET "total" = 5, "updated_at" = '2009-10-04 19:56:01' WHERE "id" = 1[0m
+Redirected to http://goo.local/
+Completed in 11ms (DB: 1) | 302 Found [http://goo.local/count]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 03:56:01) [GET]
+  [4;36;1mCount Load (0.6ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 9ms (View: 5, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 03:56:03) [GET]
+  [4;35;1mCount Load (0.7ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:02:40) [GET]
+  [4;36;1mCount Load (0.6ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 88ms (View: 83, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#create (for 127.0.0.1 at 2009-10-05 04:02:42) [POST]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"BwgZgQ0AEAw6JKsYsM/VGomIdA8J2TERj0tI2hcVxWY="}
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+  [4;36;1mCount Update (0.4ms)[0m   [0;1mUPDATE "counts" SET "total" = 6, "updated_at" = '2009-10-04 20:02:42' WHERE "id" = 1[0m
+Redirected to http://goo.local/
+Completed in 12ms (DB: 1) | 302 Found [http://goo.local/count]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:02:42) [GET]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#create to js (for 127.0.0.1 at 2009-10-05 04:02:58) [POST]
+  Parameters: {"a"=>"b"}
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  /opt/local/src/passenger/lib/phusion_passenger/rack/request_handler.rb:95:in `process_request'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:378:in `start_request_handler'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:336:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/utils.rb:183:in `safe_fork'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:163:in `start'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (27.5ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (unprocessable_entity)
+
+
+Processing ApplicationController#create to js (for 127.0.0.1 at 2009-10-05 04:03:40) [POST]
+  Parameters: {"a"=>"b"}
+
+SyntaxError (/Users/farra/dev/goo/app/controllers/counts_controller.rb:3: syntax error, unexpected '\n', expecting tASSOC):
+  /opt/local/src/passenger/lib/phusion_passenger/rack/request_handler.rb:95:in `process_request'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:378:in `start_request_handler'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:336:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/utils.rb:183:in `safe_fork'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:163:in `start'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (101.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+Starting Nanite mapper on Passenger...
+
+
+Processing ApplicationController#create to js (for 127.0.0.1 at 2009-10-05 04:03:47) [POST]
+  Parameters: {"a"=>"b"}
+
+SyntaxError (/Users/farra/dev/goo/app/controllers/counts_controller.rb:3: syntax error, unexpected '\n', expecting tASSOC):
+  /opt/local/src/passenger/lib/phusion_passenger/rack/request_handler.rb:95:in `process_request'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:378:in `start_request_handler'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:336:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/utils.rb:183:in `safe_fork'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:163:in `start'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (27.4ms)
+Rendered rescues/_request_and_response (1.8ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:04:39) [GET]
+  [4;36;1mCount Load (0.9ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 19ms (View: 14, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#create to js (for 127.0.0.1 at 2009-10-05 04:04:42) [POST]
+  Parameters: {"a"=>"b"}
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+  [4;36;1mCount Update (0.5ms)[0m   [0;1mUPDATE "counts" SET "total" = 7, "updated_at" = '2009-10-04 20:04:42' WHERE "id" = 1[0m
+Completed in 13ms (View: 1, DB: 1) | 200 OK [http://goo.local/count.js]
+Starting Nanite mapper on Passenger...
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:12:15) [GET]
+  [4;36;1mCount Load (0.9ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 49ms (View: 42, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#create (for 127.0.0.1 at 2009-10-05 04:12:17) [POST]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"BwgZgQ0AEAw6JKsYsM/VGomIdA8J2TERj0tI2hcVxWY="}
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+  [4;36;1mCount Update (0.6ms)[0m   [0;1mUPDATE "counts" SET "total" = 8, "updated_at" = '2009-10-04 20:12:17' WHERE "id" = 1[0m
+Redirected to http://goo.local/
+Completed in 13ms (DB: 1) | 302 Found [http://goo.local/count]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:12:17) [GET]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:14:15) [GET]
+  [4;36;1mCount Load (0.6ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 17ms (View: 11, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:14:17) [GET]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#create (for 127.0.0.1 at 2009-10-05 04:14:20) [POST]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"BwgZgQ0AEAw6JKsYsM/VGomIdA8J2TERj0tI2hcVxWY="}
+  [4;36;1mCount Load (0.6ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+  [4;35;1mCount Update (0.5ms)[0m   [0mUPDATE "counts" SET "total" = 9, "updated_at" = '2009-10-04 20:14:20' WHERE "id" = 1[0m
+Redirected to http://goo.local/
+Completed in 11ms (DB: 1) | 302 Found [http://goo.local/count]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:14:20) [GET]
+  [4;36;1mCount Load (0.5ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:14:21) [GET]
+  [4;35;1mCount Load (0.5ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://goo.local/]
+Starting Nanite mapper on Passenger...
+
+
+Processing CountsController#create (for 127.0.0.1 at 2009-10-05 04:14:46) [POST]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"BwgZgQ0AEAw6JKsYsM/VGomIdA8J2TERj0tI2hcVxWY="}
+  [4;36;1mCount Load (0.8ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+  [4;35;1mCount Update (0.8ms)[0m   [0mUPDATE "counts" SET "total" = 10, "updated_at" = '2009-10-04 20:14:46' WHERE "id" = 1[0m
+Redirected to http://goo.local/
+Completed in 47ms (DB: 2) | 302 Found [http://goo.local/count]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:14:46) [GET]
+  [4;36;1mCount Load (0.6ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 20ms (View: 15, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:14:48) [GET]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:14:49) [GET]
+  [4;36;1mCount Load (0.6ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#async_increment (for 127.0.0.1 at 2009-10-05 04:14:56) [POST]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"BwgZgQ0AEAw6JKsYsM/VGomIdA8J2TERj0tI2hcVxWY="}
+
+ActionView::MissingTemplate (Missing template counts/async_increment.erb in view path app/views):
+  /opt/local/src/passenger/lib/phusion_passenger/rack/request_handler.rb:95:in `process_request'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:378:in `start_request_handler'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:336:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/utils.rb:183:in `safe_fork'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:163:in `start'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendering rescues/layout (internal_server_error)
+Finished increment => nanite-counter-gandalf-0NameError: uninitialized constant NaniteAgent::Counter::Net
+ /Users/farra/dev/goo/nanite/counter/actors/counter.rb:45:in `retrieve'
+  /Users/farra/dev/goo/nanite/counter/actors/counter.rb:32:in `increment'
+  /opt/local/lib/ruby/gems/1.8/gems/nanite-0.4.1.2/bin/../lib/nanite/nanite_dispatcher.rb:26:in `send'
+  /opt/local/lib/ruby/gems/1.8/gems/nanite-0.4.1.2/bin/../lib/nanite/nanite_dispatcher.rb:26:in `dispatch'
+  /opt/local/lib/ruby/gems/1.8/gems/eventmachine-0.12.8/lib/eventmachine.rb:1076:in `call'
+  /opt/local/lib/ruby/gems/1.8/gems/eventmachine-0.12.8/lib/eventmachine.rb:1076:in `spawn_threadpool'
+  /opt/local/lib/ruby/gems/1.8/gems/eventmachine-0.12.8/lib/eventmachine.rb:1073:in `initialize'
+  /opt/local/lib/ruby/gems/1.8/gems/eventmachine-0.12.8/lib/eventmachine.rb:1073:in `new'
+  /opt/local/lib/ruby/gems/1.8/gems/eventmachine-0.12.8/lib/eventmachine.rb:1073:in `spawn_threadpool'
+  /opt/local/lib/ruby/gems/1.8/gems/eventmachine-0.12.8/lib/eventmachine.rb:1065:in `defer'
+  /opt/local/lib/ruby/gems/1.8/gems/nanite-0.4.1.2/bin/../lib/nanite/nanite_dispatcher.rb:44:in `dispatch'
+  /opt/local/lib/ruby/gems/1.8/gems/nanite-0.4.1.2/bin/../lib/nanite/agent.rb:194:in `receive'
+  /opt/local/lib/ruby/gems/1.8/gems/nanite-0.4.1.2/bin/../lib/nanite/agent.rb:214:in `setup_queue'
+  /opt/local/lib/ruby/gems/1.8/gems/amqp-0.6.0/lib/mq/queue.rb:375:in `call'
+  /opt/local/lib/ruby/gems/1.8/gems/amqp-0.6.0/lib/mq/queue.rb:375:in `receive'
+  /opt/local/lib/ruby/gems/1.8/gems/amqp-0.6.0/lib/mq.rb:171:in `process_frame'
+  /opt/local/lib/ruby/gems/1.8/gems/amqp-0.6.0/lib/amqp/client.rb:9:in `process_frame'
+  /opt/local/lib/ruby/gems/1.8/gems/amqp-0.6.0/lib/amqp/client.rb:105:in `receive_data'
+  /opt/local/lib/ruby/gems/1.8/gems/eventmachine-0.12.8/lib/eventmachine.rb:242:in `run_machine'
+  /opt/local/lib/ruby/gems/1.8/gems/eventmachine-0.12.8/lib/eventmachine.rb:242:in `run'
+  /opt/local/lib/ruby/gems/1.8/gems/nanite-0.4.1.2/bin/nanite-agent:77
+  /usr/local/bin/nanite-agent:19:in `load'
+  /usr/local/bin/nanite-agent:19
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:16:03) [GET]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 12ms (View: 6, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#async_increment (for 127.0.0.1 at 2009-10-05 04:16:06) [POST]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"BwgZgQ0AEAw6JKsYsM/VGomIdA8J2TERj0tI2hcVxWY="}
+Redirected to http://goo.local/
+Completed in 2ms (DB: 0) | 302 Found [http://goo.local/count/async_increment]
+
+
+Processing CountsController#create to js (for 127.0.0.1 at 2009-10-05 04:16:06) [POST]
+  [4;36;1mCount Load (0.6ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+  [4;35;1mCount Update (1.0ms)[0m   [0mUPDATE "counts" SET "total" = 11, "updated_at" = '2009-10-04 20:16:06' WHERE "id" = 1[0m
+Completed in 17ms (View: 1, DB: 2) | 200 OK [http://goo.local/count.js]
+Finished increment => nanite-counter-gandalf-0{"total":11}
+Starting Nanite mapper on Passenger...
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:16:06) [GET]
+  [4;36;1mCount Load (0.9ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 50ms (View: 43, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:16:08) [GET]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#async_increment (for 127.0.0.1 at 2009-10-05 04:16:09) [POST]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"BwgZgQ0AEAw6JKsYsM/VGomIdA8J2TERj0tI2hcVxWY="}
+
+RuntimeError (eventmachine not initialized: evma_send_data_to_connection):
+  eventmachine (0.12.8) lib/em/connection.rb:216:in `send_data'
+  eventmachine (0.12.8) lib/em/connection.rb:216:in `send_data'
+  amqp (0.6.0) lib/amqp/client.rb:120:in `send'
+  amqp (0.6.0) lib/mq.rb:240:in `send'
+  amqp (0.6.0) lib/mq.rb:237:in `each'
+  amqp (0.6.0) lib/mq.rb:237:in `send'
+  amqp (0.6.0) lib/mq.rb:236:in `synchronize'
+  amqp (0.6.0) lib/mq.rb:236:in `send'
+  eventmachine (0.12.8) lib/em/deferrable.rb:46:in `call'
+  eventmachine (0.12.8) lib/em/deferrable.rb:46:in `callback'
+  amqp (0.6.0) lib/mq.rb:235:in `send'
+  amqp (0.6.0) lib/mq/exchange.rb:261:in `publish'
+  eventmachine (0.12.8) lib/em/deferrable.rb:46:in `call'
+  eventmachine (0.12.8) lib/em/deferrable.rb:46:in `callback'
+  amqp (0.6.0) lib/mq/exchange.rb:246:in `publish'
+  amqp (0.6.0) lib/mq/queue.rb:348:in `publish'
+  nanite (0.4.1.2) lib/nanite/cluster.rb:70:in `publish'
+  nanite (0.4.1.2) lib/nanite/mapper.rb:200:in `send_request'
+  nanite (0.4.1.2) lib/nanite/mapper.rb:186:in `request'
+  nanite (0.4.1.2) lib/nanite.rb:59:in `request'
+  app/controllers/counts_controller.rb:28:in `async_increment'
+  /opt/local/src/passenger/lib/phusion_passenger/rack/request_handler.rb:95:in `process_request'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:378:in `start_request_handler'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:336:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/utils.rb:183:in `safe_fork'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:163:in `start'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (35.6ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:16:14) [GET]
+  [4;36;1mCount Load (0.6ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#async_increment (for 127.0.0.1 at 2009-10-05 04:16:16) [POST]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"BwgZgQ0AEAw6JKsYsM/VGomIdA8J2TERj0tI2hcVxWY="}
+
+RuntimeError (eventmachine not initialized: evma_send_data_to_connection):
+  eventmachine (0.12.8) lib/em/connection.rb:216:in `send_data'
+  eventmachine (0.12.8) lib/em/connection.rb:216:in `send_data'
+  amqp (0.6.0) lib/amqp/client.rb:120:in `send'
+  amqp (0.6.0) lib/mq.rb:240:in `send'
+  amqp (0.6.0) lib/mq.rb:237:in `each'
+  amqp (0.6.0) lib/mq.rb:237:in `send'
+  amqp (0.6.0) lib/mq.rb:236:in `synchronize'
+  amqp (0.6.0) lib/mq.rb:236:in `send'
+  eventmachine (0.12.8) lib/em/deferrable.rb:46:in `call'
+  eventmachine (0.12.8) lib/em/deferrable.rb:46:in `callback'
+  amqp (0.6.0) lib/mq.rb:235:in `send'
+  amqp (0.6.0) lib/mq/exchange.rb:261:in `publish'
+  eventmachine (0.12.8) lib/em/deferrable.rb:46:in `call'
+  eventmachine (0.12.8) lib/em/deferrable.rb:46:in `callback'
+  amqp (0.6.0) lib/mq/exchange.rb:246:in `publish'
+  amqp (0.6.0) lib/mq/queue.rb:348:in `publish'
+  nanite (0.4.1.2) lib/nanite/cluster.rb:70:in `publish'
+  nanite (0.4.1.2) lib/nanite/mapper.rb:200:in `send_request'
+  nanite (0.4.1.2) lib/nanite/mapper.rb:186:in `request'
+  nanite (0.4.1.2) lib/nanite.rb:59:in `request'
+  app/controllers/counts_controller.rb:28:in `async_increment'
+  /opt/local/src/passenger/lib/phusion_passenger/rack/request_handler.rb:95:in `process_request'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:378:in `start_request_handler'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:336:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/utils.rb:183:in `safe_fork'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:163:in `start'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (111.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:16:25) [GET]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#async_increment (for 127.0.0.1 at 2009-10-05 04:16:26) [POST]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"BwgZgQ0AEAw6JKsYsM/VGomIdA8J2TERj0tI2hcVxWY="}
+
+RuntimeError (eventmachine not initialized: evma_send_data_to_connection):
+  eventmachine (0.12.8) lib/em/connection.rb:216:in `send_data'
+  eventmachine (0.12.8) lib/em/connection.rb:216:in `send_data'
+  amqp (0.6.0) lib/amqp/client.rb:120:in `send'
+  amqp (0.6.0) lib/mq.rb:240:in `send'
+  amqp (0.6.0) lib/mq.rb:237:in `each'
+  amqp (0.6.0) lib/mq.rb:237:in `send'
+  amqp (0.6.0) lib/mq.rb:236:in `synchronize'
+  amqp (0.6.0) lib/mq.rb:236:in `send'
+  eventmachine (0.12.8) lib/em/deferrable.rb:46:in `call'
+  eventmachine (0.12.8) lib/em/deferrable.rb:46:in `callback'
+  amqp (0.6.0) lib/mq.rb:235:in `send'
+  amqp (0.6.0) lib/mq/exchange.rb:261:in `publish'
+  eventmachine (0.12.8) lib/em/deferrable.rb:46:in `call'
+  eventmachine (0.12.8) lib/em/deferrable.rb:46:in `callback'
+  amqp (0.6.0) lib/mq/exchange.rb:246:in `publish'
+  amqp (0.6.0) lib/mq/queue.rb:348:in `publish'
+  nanite (0.4.1.2) lib/nanite/cluster.rb:70:in `publish'
+  nanite (0.4.1.2) lib/nanite/mapper.rb:200:in `send_request'
+  nanite (0.4.1.2) lib/nanite/mapper.rb:186:in `request'
+  nanite (0.4.1.2) lib/nanite.rb:59:in `request'
+  app/controllers/counts_controller.rb:28:in `async_increment'
+  /opt/local/src/passenger/lib/phusion_passenger/rack/request_handler.rb:95:in `process_request'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:378:in `start_request_handler'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:336:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/utils.rb:183:in `safe_fork'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:163:in `start'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (34.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+Starting Nanite mapper on Passenger...
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:18:50) [GET]
+  [4;36;1mCount Load (0.8ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 44ms (View: 37, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#async_increment (for 127.0.0.1 at 2009-10-05 04:19:08) [POST]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"BwgZgQ0AEAw6JKsYsM/VGomIdA8J2TERj0tI2hcVxWY="}
+Redirected to http://goo.local/
+Completed in 23ms (DB: 0) | 302 Found [http://goo.local/count/async_increment]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:19:08) [GET]
+  [4;35;1mCount Load (0.7ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:19:11) [GET]
+  [4;36;1mCount Load (0.5ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#create to js (for 127.0.0.1 at 2009-10-05 04:19:20) [POST]
+  [4;35;1mCount Load (0.9ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+  [4;36;1mCount Update (0.6ms)[0m   [0;1mUPDATE "counts" SET "total" = 12, "updated_at" = '2009-10-04 20:19:20' WHERE "id" = 1[0m
+Completed in 12ms (View: 1, DB: 1) | 200 OK [http://goo.local/count.js]
+Finished increment => nanite-counter-gandalf-0{"total":12}
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:19:25) [GET]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#async_increment (for 127.0.0.1 at 2009-10-05 04:19:27) [POST]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"BwgZgQ0AEAw6JKsYsM/VGomIdA8J2TERj0tI2hcVxWY="}
+Redirected to http://goo.local/
+Completed in 2ms (DB: 0) | 302 Found [http://goo.local/count/async_increment]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:19:27) [GET]
+Starting Nanite mapper on Passenger...
+  [4;36;1mCount Load (0.7ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 154ms (View: 148, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#create to js (for 127.0.0.1 at 2009-10-05 04:19:27) [POST]
+  [4;36;1mCount Load (0.9ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+  [4;35;1mCount Update (0.6ms)[0m   [0mUPDATE "counts" SET "total" = 13, "updated_at" = '2009-10-04 20:19:27' WHERE "id" = 1[0m
+Completed in 36ms (View: 6, DB: 1) | 200 OK [http://goo.local/count.js]
+Finished increment => nanite-counter-gandalf-0{"total":13}
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:19:29) [GET]
+  [4;36;1mCount Load (0.6ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 16ms (View: 11, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-05 04:19:54) [PUT]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"BwgZgQ0AEAw6JKsYsM/VGomIdA8J2TERj0tI2hcVxWY=", "count"=>{"interval"=>"60"}}
+
+ActionController::MethodNotAllowed (Only post requests are allowed.):
+  /opt/local/src/passenger/lib/phusion_passenger/rack/request_handler.rb:95:in `process_request'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:378:in `start_request_handler'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:336:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/utils.rb:183:in `safe_fork'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:163:in `start'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (22.2ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (method_not_allowed)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-05 04:20:43) [PUT]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"BwgZgQ0AEAw6JKsYsM/VGomIdA8J2TERj0tI2hcVxWY=", "count"=>{"interval"=>"60"}}
+
+ActionController::MethodNotAllowed (Only post requests are allowed.):
+  /opt/local/src/passenger/lib/phusion_passenger/rack/request_handler.rb:95:in `process_request'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:378:in `start_request_handler'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:336:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/utils.rb:183:in `safe_fork'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:163:in `start'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (17.4ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (method_not_allowed)
+Starting Nanite mapper on Passenger...
+Starting Nanite mapper on Passenger...
+Starting Nanite mapper on Passenger...
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:21:39) [GET]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:21:39) [GET]
+  [4;36;1mCount Load (0.8ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+  [4;36;1mCount Load (0.9ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Rendering counts/index
+Completed in 114ms (View: 87, DB: 1) | 200 OK [http://goo.local/]
+Completed in 120ms (View: 101, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#schedule (for 127.0.0.1 at 2009-10-05 04:21:39) [PUT]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"BwgZgQ0AEAw6JKsYsM/VGomIdA8J2TERj0tI2hcVxWY=", "count"=>{"interval"=>"60"}}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.+):
+  app/controllers/counts_controller.rb:22:in `schedule'
+  /opt/local/src/passenger/lib/phusion_passenger/rack/request_handler.rb:95:in `process_request'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:378:in `start_request_handler'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:336:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/utils.rb:183:in `safe_fork'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:163:in `start'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (72.8ms)
+Rendered rescues/_request_and_response (289.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:22:25) [GET]
+  [4;36;1mCount Load (0.9ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 33ms (View: 28, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#schedule (for 127.0.0.1 at 2009-10-05 04:22:27) [PUT]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"BwgZgQ0AEAw6JKsYsM/VGomIdA8J2TERj0tI2hcVxWY=", "count"=>{"interval"=>"60"}}
+
+NoMethodError (undefined method `[]' for :count:Symbol):
+  app/controllers/counts_controller.rb:22:in `schedule'
+  /opt/local/src/passenger/lib/phusion_passenger/rack/request_handler.rb:95:in `process_request'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:378:in `start_request_handler'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:336:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/utils.rb:183:in `safe_fork'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:163:in `start'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (36.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CountsController#schedule (for 127.0.0.1 at 2009-10-05 04:22:46) [PUT]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"BwgZgQ0AEAw6JKsYsM/VGomIdA8J2TERj0tI2hcVxWY=", "count"=>{"interval"=>"60"}}
+
+RuntimeError (eventmachine not initialized: evma_send_data_to_connection):
+  eventmachine (0.12.8) lib/em/connection.rb:216:in `send_data'
+  eventmachine (0.12.8) lib/em/connection.rb:216:in `send_data'
+  amqp (0.6.0) lib/amqp/client.rb:120:in `send'
+  amqp (0.6.0) lib/mq.rb:240:in `send'
+  amqp (0.6.0) lib/mq.rb:237:in `each'
+  amqp (0.6.0) lib/mq.rb:237:in `send'
+  amqp (0.6.0) lib/mq.rb:236:in `synchronize'
+  amqp (0.6.0) lib/mq.rb:236:in `send'
+  eventmachine (0.12.8) lib/em/deferrable.rb:46:in `call'
+  eventmachine (0.12.8) lib/em/deferrable.rb:46:in `callback'
+  amqp (0.6.0) lib/mq.rb:235:in `send'
+  amqp (0.6.0) lib/mq/exchange.rb:261:in `publish'
+  eventmachine (0.12.8) lib/em/deferrable.rb:46:in `call'
+  eventmachine (0.12.8) lib/em/deferrable.rb:46:in `callback'
+  amqp (0.6.0) lib/mq/exchange.rb:246:in `publish'
+  amqp (0.6.0) lib/mq/queue.rb:348:in `publish'
+  nanite (0.4.1.2) lib/nanite/cluster.rb:70:in `publish'
+  nanite (0.4.1.2) lib/nanite/mapper.rb:200:in `send_request'
+  nanite (0.4.1.2) lib/nanite/mapper.rb:186:in `request'
+  nanite (0.4.1.2) lib/nanite.rb:59:in `request'
+  app/controllers/counts_controller.rb:23:in `schedule'
+  /opt/local/src/passenger/lib/phusion_passenger/rack/request_handler.rb:95:in `process_request'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:378:in `start_request_handler'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:336:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/utils.rb:183:in `safe_fork'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:163:in `start'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (39.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+Starting Nanite mapper on Passenger...
+Starting Nanite mapper on Passenger...
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:22:58) [GET]
+  [4;36;1mCount Load (1.0ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:22:58) [GET]
+  [4;36;1mCount Load (0.9ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Completed in 54ms (View: 46, DB: 1) | 200 OK [http://goo.local/]
+Rendering counts/index
+Completed in 94ms (View: 87, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#schedule (for 127.0.0.1 at 2009-10-05 04:23:14) [PUT]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"BwgZgQ0AEAw6JKsYsM/VGomIdA8J2TERj0tI2hcVxWY=", "count"=>{"interval"=>"60"}}
+
+RuntimeError (eventmachine not initialized: evma_send_data_to_connection):
+  eventmachine (0.12.8) lib/em/connection.rb:216:in `send_data'
+  eventmachine (0.12.8) lib/em/connection.rb:216:in `send_data'
+  amqp (0.6.0) lib/amqp/client.rb:120:in `send'
+  amqp (0.6.0) lib/mq.rb:240:in `send'
+  amqp (0.6.0) lib/mq.rb:237:in `each'
+  amqp (0.6.0) lib/mq.rb:237:in `send'
+  amqp (0.6.0) lib/mq.rb:236:in `synchronize'
+  amqp (0.6.0) lib/mq.rb:236:in `send'
+  eventmachine (0.12.8) lib/em/deferrable.rb:46:in `call'
+  eventmachine (0.12.8) lib/em/deferrable.rb:46:in `callback'
+  amqp (0.6.0) lib/mq.rb:235:in `send'
+  amqp (0.6.0) lib/mq/exchange.rb:261:in `publish'
+  eventmachine (0.12.8) lib/em/deferrable.rb:46:in `call'
+  eventmachine (0.12.8) lib/em/deferrable.rb:46:in `callback'
+  amqp (0.6.0) lib/mq/exchange.rb:246:in `publish'
+  amqp (0.6.0) lib/mq/queue.rb:348:in `publish'
+  nanite (0.4.1.2) lib/nanite/cluster.rb:70:in `publish'
+  nanite (0.4.1.2) lib/nanite/mapper.rb:200:in `send_request'
+  nanite (0.4.1.2) lib/nanite/mapper.rb:186:in `request'
+  nanite (0.4.1.2) lib/nanite.rb:59:in `request'
+  app/controllers/counts_controller.rb:23:in `schedule'
+  /opt/local/src/passenger/lib/phusion_passenger/rack/request_handler.rb:95:in `process_request'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:378:in `start_request_handler'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:336:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/utils.rb:183:in `safe_fork'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:163:in `start'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (46.7ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (internal_server_error)
+Starting Nanite mapper on Passenger...
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:23:33) [GET]
+  [4;36;1mCount Load (1.0ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 100ms (View: 93, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:23:40) [GET]
+  [4;35;1mCount Load (3.0ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 13ms (View: 6, DB: 3) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#schedule (for 127.0.0.1 at 2009-10-05 04:23:41) [PUT]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"BwgZgQ0AEAw6JKsYsM/VGomIdA8J2TERj0tI2hcVxWY=", "count"=>{"interval"=>"60"}}
+Redirected to http://goo.local/
+Completed in 3ms (DB: 0) | 302 Found [http://goo.local/count/schedule]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:23:41) [GET]
+  [4;36;1mCount Load (0.6ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:24:20) [GET]
+  [4;35;1mCount Load (0.5ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#schedule (for 127.0.0.1 at 2009-10-05 04:24:22) [PUT]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"BwgZgQ0AEAw6JKsYsM/VGomIdA8J2TERj0tI2hcVxWY=", "count"=>{"interval"=>"60"}}
+Redirected to http://goo.local/
+Completed in 3ms (DB: 0) | 302 Found [http://goo.local/count/schedule]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:24:22) [GET]
+  [4;36;1mCount Load (0.6ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 14ms (View: 7, DB: 1) | 200 OK [http://goo.local/]
+Starting Nanite mapper on Passenger...
+Starting Nanite mapper on Passenger...
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:25:55) [GET]
+
+
+Processing CountsController#create (for 127.0.0.1 at 2009-10-05 04:25:55) [POST]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"BwgZgQ0AEAw6JKsYsM/VGomIdA8J2TERj0tI2hcVxWY="}
+  [4;36;1mCount Load (1.0ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+  [4;36;1mCount Load (0.9ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+  [4;35;1mCount Update (0.7ms)[0m   [0mUPDATE "counts" SET "total" = 14, "updated_at" = '2009-10-04 20:25:55' WHERE "id" = 1[0m
+Redirected to http://goo.local/
+Completed in 36ms (DB: 2) | 302 Found [http://goo.local/count]
+Completed in 82ms (View: 73, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:25:55) [GET]
+  [4;36;1mCount Load (1.0ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 37ms (View: 24, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#async_increment (for 127.0.0.1 at 2009-10-05 04:25:57) [POST]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"BwgZgQ0AEAw6JKsYsM/VGomIdA8J2TERj0tI2hcVxWY="}
+
+RuntimeError (eventmachine not initialized: evma_send_data_to_connection):
+  eventmachine (0.12.8) lib/em/connection.rb:216:in `send_data'
+  eventmachine (0.12.8) lib/em/connection.rb:216:in `send_data'
+  amqp (0.6.0) lib/amqp/client.rb:120:in `send'
+  amqp (0.6.0) lib/mq.rb:240:in `send'
+  amqp (0.6.0) lib/mq.rb:237:in `each'
+  amqp (0.6.0) lib/mq.rb:237:in `send'
+  amqp (0.6.0) lib/mq.rb:236:in `synchronize'
+  amqp (0.6.0) lib/mq.rb:236:in `send'
+  eventmachine (0.12.8) lib/em/deferrable.rb:46:in `call'
+  eventmachine (0.12.8) lib/em/deferrable.rb:46:in `callback'
+  amqp (0.6.0) lib/mq.rb:235:in `send'
+  amqp (0.6.0) lib/mq/exchange.rb:261:in `publish'
+  eventmachine (0.12.8) lib/em/deferrable.rb:46:in `call'
+  eventmachine (0.12.8) lib/em/deferrable.rb:46:in `callback'
+  amqp (0.6.0) lib/mq/exchange.rb:246:in `publish'
+  amqp (0.6.0) lib/mq/queue.rb:348:in `publish'
+  nanite (0.4.1.2) lib/nanite/cluster.rb:70:in `publish'
+  nanite (0.4.1.2) lib/nanite/mapper.rb:200:in `send_request'
+  nanite (0.4.1.2) lib/nanite/mapper.rb:186:in `request'
+  nanite (0.4.1.2) lib/nanite.rb:59:in `request'
+  app/controllers/counts_controller.rb:28:in `async_increment'
+  /opt/local/src/passenger/lib/phusion_passenger/rack/request_handler.rb:95:in `process_request'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:378:in `start_request_handler'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:336:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/utils.rb:183:in `safe_fork'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:163:in `start'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (40.2ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+Starting Nanite mapper on Passenger...
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:26:24) [GET]
+  [4;36;1mCount Load (0.9ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 50ms (View: 42, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#create (for 127.0.0.1 at 2009-10-05 04:26:30) [POST]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"BwgZgQ0AEAw6JKsYsM/VGomIdA8J2TERj0tI2hcVxWY="}
+  [4;35;1mCount Load (0.7ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+  [4;36;1mCount Update (2.0ms)[0m   [0;1mUPDATE "counts" SET "total" = 15, "updated_at" = '2009-10-04 20:26:30' WHERE "id" = 1[0m
+Redirected to http://goo.local/
+Completed in 15ms (DB: 3) | 302 Found [http://goo.local/count]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:26:30) [GET]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:26:32) [GET]
+  [4;36;1mCount Load (0.6ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#async_increment (for 127.0.0.1 at 2009-10-05 04:26:34) [POST]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"BwgZgQ0AEAw6JKsYsM/VGomIdA8J2TERj0tI2hcVxWY="}
+Redirected to http://goo.local/
+Completed in 3ms (DB: 0) | 302 Found [http://goo.local/count/async_increment]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:26:34) [GET]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#create to js (for 127.0.0.1 at 2009-10-05 04:26:34) [POST]
+  [4;36;1mCount Load (0.6ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+  [4;35;1mCount Update (0.5ms)[0m   [0mUPDATE "counts" SET "total" = 16, "updated_at" = '2009-10-04 20:26:34' WHERE "id" = 1[0m
+Completed in 37ms (View: 1, DB: 1) | 200 OK [http://goo.local/count.js]
+Finished increment => nanite-counter-gandalf-0{"total":16}
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:26:35) [GET]
+  [4;36;1mCount Load (0.7ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#schedule (for 127.0.0.1 at 2009-10-05 04:26:39) [PUT]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"BwgZgQ0AEAw6JKsYsM/VGomIdA8J2TERj0tI2hcVxWY=", "count"=>{"interval"=>"60"}}
+Redirected to http://goo.local/
+Completed in 4ms (DB: 0) | 302 Found [http://goo.local/count/schedule]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:26:39) [GET]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 89ms (View: 7, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:27:00) [GET]
+  [4;36;1mCount Load (0.6ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#create to js (for 127.0.0.1 at 2009-10-05 04:27:40) [POST]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+  [4;36;1mCount Update (0.6ms)[0m   [0;1mUPDATE "counts" SET "total" = 17, "updated_at" = '2009-10-04 20:27:40' WHERE "id" = 1[0m
+Completed in 14ms (View: 1, DB: 1) | 200 OK [http://goo.local/count.js]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:27:55) [GET]
+  [4;35;1mCount Load (0.8ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 12ms (View: 6, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:27:56) [GET]
+  [4;36;1mCount Load (0.5ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#create to js (for 127.0.0.1 at 2009-10-05 04:28:40) [POST]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+  [4;36;1mCount Update (0.4ms)[0m   [0;1mUPDATE "counts" SET "total" = 18, "updated_at" = '2009-10-04 20:28:40' WHERE "id" = 1[0m
+Completed in 12ms (View: 1, DB: 1) | 200 OK [http://goo.local/count.js]
+
+
+Processing CountsController#create to js (for 127.0.0.1 at 2009-10-05 04:29:40) [POST]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+  [4;36;1mCount Update (0.5ms)[0m   [0;1mUPDATE "counts" SET "total" = 19, "updated_at" = '2009-10-04 20:29:40' WHERE "id" = 1[0m
+Completed in 14ms (View: 1, DB: 1) | 200 OK [http://goo.local/count.js]
+
+
+Processing CountsController#create to js (for 127.0.0.1 at 2009-10-05 04:30:40) [POST]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+  [4;36;1mCount Update (0.4ms)[0m   [0;1mUPDATE "counts" SET "total" = 20, "updated_at" = '2009-10-04 20:30:40' WHERE "id" = 1[0m
+Completed in 12ms (View: 1, DB: 1) | 200 OK [http://goo.local/count.js]
+
+
+Processing CountsController#create to js (for 127.0.0.1 at 2009-10-05 04:31:40) [POST]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+  [4;36;1mCount Update (0.5ms)[0m   [0;1mUPDATE "counts" SET "total" = 21, "updated_at" = '2009-10-04 20:31:40' WHERE "id" = 1[0m
+Completed in 15ms (View: 1, DB: 1) | 200 OK [http://goo.local/count.js]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:32:21) [GET]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#create to js (for 127.0.0.1 at 2009-10-05 04:32:40) [POST]
+  [4;36;1mCount Load (0.6ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+  [4;35;1mCount Update (0.4ms)[0m   [0mUPDATE "counts" SET "total" = 22, "updated_at" = '2009-10-04 20:32:40' WHERE "id" = 1[0m
+Completed in 11ms (View: 1, DB: 1) | 200 OK [http://goo.local/count.js]
