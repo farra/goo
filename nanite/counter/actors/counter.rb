@@ -13,6 +13,7 @@ class Counter
 
   # TODO !!! change this to your localhost, or whatever
   INCREMENT_URL = "http://goo.local/count.js"
+  ASYNC_URL = "http://goo.local/count/async_increment.js"
 
   expose :ping
   def ping(payload)
@@ -20,14 +21,24 @@ class Counter
   end
 
   expose :schedule, :increment
-
+  
+  # schedule a job to regularly have the rails app
+  # send a Nanite request to increment.
+  # Order of messages:
+  #   - rails /schedule action sends schedule request to nanite
+  #   - every [interval] nanite sends HTTP post to rails app
+  #   - the rails app responds to post by sending Nanite request to increment
+  #   - nanite responds to request by sending a post to increment
+  #   - rails app increments the count
+  # convoluted, yes, but it exercises the whole chain to ensure it all works
   def schedule(interval)
     scheduler.every interval do |job|
-      Nanite.request('/counters/increment',nil)
+      retrieve ASYNC_URL
     end
     return "scheduled /counters/increment every #{interval}"
   end
 
+  # increment the count by posting to the web application
   def increment(payload)
     retrieve INCREMENT_URL
   end

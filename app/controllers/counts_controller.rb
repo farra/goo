@@ -1,6 +1,6 @@
 class CountsController < ApplicationController
 
-  skip_before_filter :verify_authenticity_token, :only => [:update, :create]
+  skip_before_filter :verify_authenticity_token
 
   def index
     @count = Count.first
@@ -28,7 +28,10 @@ class CountsController < ApplicationController
     Nanite.request('/counters/increment',nil) do |res|
       Rails.logger.info "Finished increment => #{res}"
     end
-    redirect_to :action => :index
+    respond_to do |wants|
+      wants.html {redirect_to :action => :index}
+      wants.js   {render :text => '{"requested":true' }
+    end
   end
 
   private

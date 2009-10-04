@@ -1627,3 +1627,880 @@ Processing CountsController#create to js (for 127.0.0.1 at 2009-10-05 04:32:40) 
   [4;36;1mCount Load (0.6ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
   [4;35;1mCount Update (0.4ms)[0m   [0mUPDATE "counts" SET "total" = 22, "updated_at" = '2009-10-04 20:32:40' WHERE "id" = 1[0m
 Completed in 11ms (View: 1, DB: 1) | 200 OK [http://goo.local/count.js]
+Starting Nanite mapper on Passenger...
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:45:23) [GET]
+  [4;36;1mCount Load (0.9ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 39ms (View: 33, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:45:26) [GET]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#create (for 127.0.0.1 at 2009-10-05 04:45:27) [POST]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"BwgZgQ0AEAw6JKsYsM/VGomIdA8J2TERj0tI2hcVxWY="}
+  [4;36;1mCount Load (0.8ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+  [4;35;1mCount Update (0.7ms)[0m   [0mUPDATE "counts" SET "total" = 23, "updated_at" = '2009-10-04 20:45:27' WHERE "id" = 1[0m
+Redirected to http://goo.local/
+Completed in 19ms (DB: 1) | 302 Found [http://goo.local/count]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:45:27) [GET]
+  [4;36;1mCount Load (0.6ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:45:28) [GET]
+  [4;35;1mCount Load (0.5ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#async_increment (for 127.0.0.1 at 2009-10-05 04:45:29) [POST]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"BwgZgQ0AEAw6JKsYsM/VGomIdA8J2TERj0tI2hcVxWY="}
+Redirected to http://goo.local/
+Completed in 3ms (DB: 0) | 302 Found [http://goo.local/count/async_increment]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:45:30) [GET]
+  [4;36;1mCount Load (0.6ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#create to js (for 127.0.0.1 at 2009-10-05 04:45:30) [POST]
+  [4;35;1mCount Load (0.7ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+  [4;36;1mCount Update (2.1ms)[0m   [0;1mUPDATE "counts" SET "total" = 24, "updated_at" = '2009-10-04 20:45:30' WHERE "id" = 1[0m
+Completed in 16ms (View: 1, DB: 3) | 200 OK [http://goo.local/count.js]
+Finished increment => nanite-counter-gandalf-0{"total":24}
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:45:31) [GET]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:46:49) [GET]
+  [4;36;1mCount Load (0.8ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 165ms (View: 160, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:46:52) [GET]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing CountsController#create (for 127.0.0.1 at 2009-10-05 04:46:53) [POST]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"6nRmKq1gvKZoW8oCbP+p8rRUY1FPOVEALaT6P7h72i8="}
+  [4;36;1mCount Load (0.6ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+  [4;35;1mCount Update (0.5ms)[0m   [0mUPDATE "counts" SET "total" = 25, "updated_at" = '2009-10-04 20:46:53' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/
+Completed in 13ms (DB: 1) | 302 Found [http://localhost/count]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:46:53) [GET]
+  [4;36;1mCount Load (0.6ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:46:54) [GET]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing CountsController#async_increment (for 127.0.0.1 at 2009-10-05 04:46:56) [POST]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"6nRmKq1gvKZoW8oCbP+p8rRUY1FPOVEALaT6P7h72i8="}
+Redirected to http://localhost:3000/
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/count/async_increment]
+
+
+Processing CountsController#create to js (for 127.0.0.1 at 2009-10-05 04:46:56) [POST]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:46:56) [GET]
+  [4;36;1mCount Load (0.6ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+  [4;36;1mCount Load (0.6ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+  [4;35;1mCount Update (1.2ms)[0m   [0mUPDATE "counts" SET "total" = 26, "updated_at" = '2009-10-04 20:46:56' WHERE "id" = 1[0m
+Rendering counts/index
+Completed in 19ms (View: 1, DB: 2) | 200 OK [http://goo.local/count.js]
+Completed in 16ms (View: 8, DB: 1) | 200 OK [http://localhost/]
+Finished increment => nanite-counter-gandalf-0{"total":26}
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:46:57) [GET]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing CountsController#schedule (for 127.0.0.1 at 2009-10-05 04:47:00) [PUT]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"6nRmKq1gvKZoW8oCbP+p8rRUY1FPOVEALaT6P7h72i8=", "count"=>{"interval"=>"60"}}
+Redirected to http://localhost:3000/
+Completed in 14ms (DB: 0) | 302 Found [http://localhost/count/schedule]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:47:00) [GET]
+  [4;36;1mCount Load (0.6ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:47:02) [GET]
+  [4;35;1mCount Load (0.7ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 88ms (View: 6, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing CountsController#create (for 127.0.0.1 at 2009-10-05 04:47:03) [POST]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"6nRmKq1gvKZoW8oCbP+p8rRUY1FPOVEALaT6P7h72i8="}
+  [4;36;1mCount Load (0.6ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+  [4;35;1mCount Update (0.4ms)[0m   [0mUPDATE "counts" SET "total" = 27, "updated_at" = '2009-10-04 20:47:03' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/
+Completed in 14ms (DB: 1) | 302 Found [http://localhost/count]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:47:03) [GET]
+  [4;36;1mCount Load (0.6ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing CountsController#async_increment (for 127.0.0.1 at 2009-10-05 04:47:04) [POST]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"6nRmKq1gvKZoW8oCbP+p8rRUY1FPOVEALaT6P7h72i8="}
+Redirected to http://localhost:3000/
+Completed in 8ms (DB: 0) | 302 Found [http://localhost/count/async_increment]
+
+
+Processing CountsController#create to js (for 127.0.0.1 at 2009-10-05 04:47:04) [POST]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:47:04) [GET]
+  [4;36;1mCount Load (0.6ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+  [4;35;1mCount Update (0.7ms)[0m   [0mUPDATE "counts" SET "total" = 28, "updated_at" = '2009-10-04 20:47:04' WHERE "id" = 1[0m
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 21ms (View: 1, DB: 1) | 200 OK [http://goo.local/count.js]
+Completed in 15ms (View: 7, DB: 1) | 200 OK [http://localhost/]
+Finished increment => nanite-counter-gandalf-0{"total":28}
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:47:22) [GET]
+  [4;36;1mCount Load (0.5ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:47:32) [GET]
+  [4;36;1mCount Load (0.9ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 32ms (View: 26, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:47:58) [GET]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing CountsController#create to js (for 127.0.0.1 at 2009-10-05 04:48:00) [POST]
+  [4;36;1mCount Load (0.6ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+  [4;35;1mCount Update (0.5ms)[0m   [0mUPDATE "counts" SET "total" = 29, "updated_at" = '2009-10-04 20:48:00' WHERE "id" = 1[0m
+Completed in 13ms (View: 1, DB: 1) | 200 OK [http://goo.local/count.js]
+
+
+Processing CountsController#create to js (for 127.0.0.1 at 2009-10-05 04:48:01) [POST]
+  [4;36;1mCount Load (0.6ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+  [4;35;1mCount Update (0.5ms)[0m   [0mUPDATE "counts" SET "total" = 30, "updated_at" = '2009-10-04 20:48:01' WHERE "id" = 1[0m
+Completed in 13ms (View: 1, DB: 1) | 200 OK [http://goo.local/count.js]
+
+
+Processing CountsController#async_increment (for 127.0.0.1 at 2009-10-05 04:48:04) [POST]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"6nRmKq1gvKZoW8oCbP+p8rRUY1FPOVEALaT6P7h72i8="}
+Redirected to http://localhost:3000/
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/count/async_increment]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:48:04) [GET]
+
+
+Processing CountsController#create to js (for 127.0.0.1 at 2009-10-05 04:48:04) [POST]
+  [4;36;1mCount Load (0.6ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+  [4;36;1mCount Load (0.6ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+  [4;35;1mCount Update (0.4ms)[0m   [0mUPDATE "counts" SET "total" = 31, "updated_at" = '2009-10-04 20:48:04' WHERE "id" = 1[0m
+Completed in 14ms (View: 6, DB: 1) | 200 OK [http://localhost/]
+Completed in 15ms (View: 1, DB: 1) | 200 OK [http://goo.local/count.js]
+Finished increment => nanite-counter-gandalf-0{"total":31}
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:48:06) [GET]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 11ms (View: 5, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing CountsController#create to js (for 127.0.0.1 at 2009-10-05 04:49:00) [POST]
+  [4;36;1mCount Load (0.6ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+  [4;35;1mCount Update (4.1ms)[0m   [0mUPDATE "counts" SET "total" = 32, "updated_at" = '2009-10-04 20:49:00' WHERE "id" = 1[0m
+Completed in 19ms (View: 2, DB: 5) | 200 OK [http://goo.local/count.js]
+
+
+Processing CountsController#create to js (for 127.0.0.1 at 2009-10-05 04:49:01) [POST]
+  [4;36;1mCount Load (1.2ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+  [4;35;1mCount Update (0.5ms)[0m   [0mUPDATE "counts" SET "total" = 33, "updated_at" = '2009-10-04 20:49:01' WHERE "id" = 1[0m
+Completed in 11ms (View: 1, DB: 2) | 200 OK [http://goo.local/count.js]
+Starting Nanite mapper on Passenger...
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:58:41) [GET]
+  [4;36;1mCount Load (1.0ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 50ms (View: 40, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:58:42) [GET]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:59:02) [GET]
+  [4;36;1mCount Load (0.6ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#async_increment to js (for 127.0.0.1 at 2009-10-05 04:59:05) [POST]
+  Parameters: {"a"=>"b"}
+Completed in 10ms (View: 1, DB: 0) | 200 OK [http://goo.local/count/async_increment.js]
+
+
+Processing CountsController#create to js (for 127.0.0.1 at 2009-10-05 04:59:05) [POST]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+  [4;36;1mCount Update (0.6ms)[0m   [0;1mUPDATE "counts" SET "total" = 34, "updated_at" = '2009-10-04 20:59:05' WHERE "id" = 1[0m
+Completed in 10ms (View: 1, DB: 1) | 200 OK [http://goo.local/count.js]
+Finished increment => nanite-counter-gandalf-0{"total":34}
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:59:09) [GET]
+  [4;35;1mCount Load (0.5ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#async_increment (for 127.0.0.1 at 2009-10-05 04:59:14) [POST]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"BwgZgQ0AEAw6JKsYsM/VGomIdA8J2TERj0tI2hcVxWY="}
+Redirected to http://goo.local/
+Completed in 6ms (DB: 0) | 302 Found [http://goo.local/count/async_increment]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:59:14) [GET]
+  [4;36;1mCount Load (0.6ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#create to js (for 127.0.0.1 at 2009-10-05 04:59:14) [POST]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+  [4;36;1mCount Update (0.6ms)[0m   [0;1mUPDATE "counts" SET "total" = 35, "updated_at" = '2009-10-04 20:59:14' WHERE "id" = 1[0m
+Completed in 13ms (View: 1, DB: 1) | 200 OK [http://goo.local/count.js]
+Finished increment => nanite-counter-gandalf-0{"total":35}
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:59:15) [GET]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 89ms (View: 84, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#create (for 127.0.0.1 at 2009-10-05 04:59:17) [POST]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"BwgZgQ0AEAw6JKsYsM/VGomIdA8J2TERj0tI2hcVxWY="}
+  [4;36;1mCount Load (0.6ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+  [4;35;1mCount Update (0.6ms)[0m   [0mUPDATE "counts" SET "total" = 36, "updated_at" = '2009-10-04 20:59:17' WHERE "id" = 1[0m
+Redirected to http://goo.local/
+Completed in 13ms (DB: 1) | 302 Found [http://goo.local/count]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:59:17) [GET]
+  [4;36;1mCount Load (0.6ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:59:18) [GET]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:59:19) [GET]
+  [4;36;1mCount Load (0.6ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#schedule (for 127.0.0.1 at 2009-10-05 04:59:21) [PUT]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"BwgZgQ0AEAw6JKsYsM/VGomIdA8J2TERj0tI2hcVxWY=", "count"=>{"interval"=>"60"}}
+Redirected to http://goo.local/
+Completed in 2ms (DB: 0) | 302 Found [http://goo.local/count/schedule]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 04:59:21) [GET]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 12ms (View: 7, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#create to js (for 127.0.0.1 at 2009-10-05 05:00:21) [POST]
+  [4;36;1mCount Load (0.6ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+  [4;35;1mCount Update (0.5ms)[0m   [0mUPDATE "counts" SET "total" = 37, "updated_at" = '2009-10-04 21:00:21' WHERE "id" = 1[0m
+Completed in 12ms (View: 1, DB: 1) | 200 OK [http://goo.local/count.js]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 05:01:32) [GET]
+  [4;36;1mCount Load (0.6ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 05:01:33) [GET]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 05:01:33) [GET]
+  [4;36;1mCount Load (0.6ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://goo.local/]
+Starting Nanite mapper on Passenger...
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 05:06:34) [GET]
+  [4;36;1mCount Load (1.1ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 143ms (View: 135, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#create (for 127.0.0.1 at 2009-10-05 05:06:37) [POST]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"BwgZgQ0AEAw6JKsYsM/VGomIdA8J2TERj0tI2hcVxWY="}
+  [4;35;1mCount Load (1.1ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+  [4;36;1mCount Update (0.6ms)[0m   [0;1mUPDATE "counts" SET "total" = 38, "updated_at" = '2009-10-04 21:06:37' WHERE "id" = 1[0m
+Redirected to http://goo.local/
+Completed in 17ms (DB: 2) | 302 Found [http://goo.local/count]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 05:06:37) [GET]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 05:06:38) [GET]
+  [4;36;1mCount Load (0.6ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#async_increment (for 127.0.0.1 at 2009-10-05 05:06:39) [POST]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"BwgZgQ0AEAw6JKsYsM/VGomIdA8J2TERj0tI2hcVxWY="}
+Redirected to http://goo.local/
+Completed in 3ms (DB: 0) | 302 Found [http://goo.local/count/async_increment]
+Starting Nanite mapper on Passenger...
+
+
+Processing CountsController#create to js (for 127.0.0.1 at 2009-10-05 05:06:39) [POST]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+  [4;36;1mCount Update (0.5ms)[0m   [0;1mUPDATE "counts" SET "total" = 39, "updated_at" = '2009-10-04 21:06:39' WHERE "id" = 1[0m
+Completed in 19ms (View: 1, DB: 1) | 200 OK [http://goo.local/count.js]
+Finished increment => nanite-counter-gandalf-0{"total":39}
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 05:06:40) [GET]
+  [4;36;1mCount Load (0.9ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 52ms (View: 43, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 05:06:41) [GET]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#schedule (for 127.0.0.1 at 2009-10-05 05:06:43) [PUT]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"BwgZgQ0AEAw6JKsYsM/VGomIdA8J2TERj0tI2hcVxWY=", "count"=>{"interval"=>"60"}}
+
+RuntimeError (eventmachine not initialized: evma_send_data_to_connection):
+  eventmachine (0.12.8) lib/em/connection.rb:216:in `send_data'
+  eventmachine (0.12.8) lib/em/connection.rb:216:in `send_data'
+  amqp (0.6.0) lib/amqp/client.rb:120:in `send'
+  amqp (0.6.0) lib/mq.rb:240:in `send'
+  amqp (0.6.0) lib/mq.rb:237:in `each'
+  amqp (0.6.0) lib/mq.rb:237:in `send'
+  amqp (0.6.0) lib/mq.rb:236:in `synchronize'
+  amqp (0.6.0) lib/mq.rb:236:in `send'
+  eventmachine (0.12.8) lib/em/deferrable.rb:46:in `call'
+  eventmachine (0.12.8) lib/em/deferrable.rb:46:in `callback'
+  amqp (0.6.0) lib/mq.rb:235:in `send'
+  amqp (0.6.0) lib/mq/exchange.rb:261:in `publish'
+  eventmachine (0.12.8) lib/em/deferrable.rb:46:in `call'
+  eventmachine (0.12.8) lib/em/deferrable.rb:46:in `callback'
+  amqp (0.6.0) lib/mq/exchange.rb:246:in `publish'
+  amqp (0.6.0) lib/mq/queue.rb:348:in `publish'
+  nanite (0.4.1.2) lib/nanite/cluster.rb:70:in `publish'
+  nanite (0.4.1.2) lib/nanite/mapper.rb:200:in `send_request'
+  nanite (0.4.1.2) lib/nanite/mapper.rb:186:in `request'
+  nanite (0.4.1.2) lib/nanite.rb:59:in `request'
+  app/controllers/counts_controller.rb:23:in `schedule'
+  /opt/local/src/passenger/lib/phusion_passenger/rack/request_handler.rb:95:in `process_request'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:378:in `start_request_handler'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:336:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/utils.rb:183:in `safe_fork'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:163:in `start'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (35.7ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CountsController#async_increment (for 127.0.0.1 at 2009-10-05 05:06:49) [POST]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"BwgZgQ0AEAw6JKsYsM/VGomIdA8J2TERj0tI2hcVxWY="}
+
+RuntimeError (eventmachine not initialized: evma_send_data_to_connection):
+  eventmachine (0.12.8) lib/em/connection.rb:216:in `send_data'
+  eventmachine (0.12.8) lib/em/connection.rb:216:in `send_data'
+  amqp (0.6.0) lib/amqp/client.rb:120:in `send'
+  amqp (0.6.0) lib/mq.rb:240:in `send'
+  amqp (0.6.0) lib/mq.rb:237:in `each'
+  amqp (0.6.0) lib/mq.rb:237:in `send'
+  amqp (0.6.0) lib/mq.rb:236:in `synchronize'
+  amqp (0.6.0) lib/mq.rb:236:in `send'
+  eventmachine (0.12.8) lib/em/deferrable.rb:46:in `call'
+  eventmachine (0.12.8) lib/em/deferrable.rb:46:in `callback'
+  amqp (0.6.0) lib/mq.rb:235:in `send'
+  amqp (0.6.0) lib/mq/exchange.rb:261:in `publish'
+  eventmachine (0.12.8) lib/em/deferrable.rb:46:in `call'
+  eventmachine (0.12.8) lib/em/deferrable.rb:46:in `callback'
+  amqp (0.6.0) lib/mq/exchange.rb:246:in `publish'
+  amqp (0.6.0) lib/mq/queue.rb:348:in `publish'
+  nanite (0.4.1.2) lib/nanite/cluster.rb:70:in `publish'
+  nanite (0.4.1.2) lib/nanite/mapper.rb:200:in `send_request'
+  nanite (0.4.1.2) lib/nanite/mapper.rb:186:in `request'
+  nanite (0.4.1.2) lib/nanite.rb:59:in `request'
+  app/controllers/counts_controller.rb:28:in `async_increment'
+  /opt/local/src/passenger/lib/phusion_passenger/rack/request_handler.rb:95:in `process_request'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:378:in `start_request_handler'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:336:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/utils.rb:183:in `safe_fork'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:163:in `start'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (39.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 05:07:04) [GET]
+  [4;36;1mCount Load (0.6ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#async_increment (for 127.0.0.1 at 2009-10-05 05:07:04) [POST]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"BwgZgQ0AEAw6JKsYsM/VGomIdA8J2TERj0tI2hcVxWY="}
+
+RuntimeError (eventmachine not initialized: evma_send_data_to_connection):
+  eventmachine (0.12.8) lib/em/connection.rb:216:in `send_data'
+  eventmachine (0.12.8) lib/em/connection.rb:216:in `send_data'
+  amqp (0.6.0) lib/amqp/client.rb:120:in `send'
+  amqp (0.6.0) lib/mq.rb:240:in `send'
+  amqp (0.6.0) lib/mq.rb:237:in `each'
+  amqp (0.6.0) lib/mq.rb:237:in `send'
+  amqp (0.6.0) lib/mq.rb:236:in `synchronize'
+  amqp (0.6.0) lib/mq.rb:236:in `send'
+  eventmachine (0.12.8) lib/em/deferrable.rb:46:in `call'
+  eventmachine (0.12.8) lib/em/deferrable.rb:46:in `callback'
+  amqp (0.6.0) lib/mq.rb:235:in `send'
+  amqp (0.6.0) lib/mq/exchange.rb:261:in `publish'
+  eventmachine (0.12.8) lib/em/deferrable.rb:46:in `call'
+  eventmachine (0.12.8) lib/em/deferrable.rb:46:in `callback'
+  amqp (0.6.0) lib/mq/exchange.rb:246:in `publish'
+  amqp (0.6.0) lib/mq/queue.rb:348:in `publish'
+  nanite (0.4.1.2) lib/nanite/cluster.rb:70:in `publish'
+  nanite (0.4.1.2) lib/nanite/mapper.rb:200:in `send_request'
+  nanite (0.4.1.2) lib/nanite/mapper.rb:186:in `request'
+  nanite (0.4.1.2) lib/nanite.rb:59:in `request'
+  app/controllers/counts_controller.rb:28:in `async_increment'
+  /opt/local/src/passenger/lib/phusion_passenger/rack/request_handler.rb:95:in `process_request'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:378:in `start_request_handler'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:336:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/utils.rb:183:in `safe_fork'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:163:in `start'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (38.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+Starting Nanite mapper on Passenger...
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 05:07:13) [GET]
+  [4;36;1mCount Load (0.9ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 52ms (View: 44, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#async_increment (for 127.0.0.1 at 2009-10-05 05:07:14) [POST]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"BwgZgQ0AEAw6JKsYsM/VGomIdA8J2TERj0tI2hcVxWY="}
+Redirected to http://goo.local/
+Completed in 5ms (DB: 0) | 302 Found [http://goo.local/count/async_increment]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 05:07:14) [GET]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 118ms (View: 7, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#create (for 127.0.0.1 at 2009-10-05 05:07:17) [POST]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"BwgZgQ0AEAw6JKsYsM/VGomIdA8J2TERj0tI2hcVxWY="}
+  [4;36;1mCount Load (0.7ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+  [4;35;1mCount Update (0.6ms)[0m   [0mUPDATE "counts" SET "total" = 40, "updated_at" = '2009-10-04 21:07:17' WHERE "id" = 1[0m
+Redirected to http://goo.local/
+Completed in 12ms (DB: 1) | 302 Found [http://goo.local/count]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 05:07:17) [GET]
+  [4;36;1mCount Load (0.6ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 05:07:19) [GET]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#async_increment (for 127.0.0.1 at 2009-10-05 05:07:20) [POST]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"BwgZgQ0AEAw6JKsYsM/VGomIdA8J2TERj0tI2hcVxWY="}
+Redirected to http://goo.local/
+Completed in 3ms (DB: 0) | 302 Found [http://goo.local/count/async_increment]
+
+
+Processing CountsController#create to js (for 127.0.0.1 at 2009-10-05 05:07:20) [POST]
+  [4;36;1mCount Load (0.6ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+  [4;35;1mCount Update (0.6ms)[0m   [0mUPDATE "counts" SET "total" = 41, "updated_at" = '2009-10-04 21:07:20' WHERE "id" = 1[0m
+Completed in 18ms (View: 1, DB: 1) | 200 OK [http://goo.local/count.js]
+Finished increment => nanite-counter-gandalf-0{"total":41}
+Starting Nanite mapper on Passenger...
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 05:07:20) [GET]
+  [4;36;1mCount Load (0.8ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 50ms (View: 43, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 05:07:22) [GET]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#async_increment (for 127.0.0.1 at 2009-10-05 05:07:23) [POST]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"BwgZgQ0AEAw6JKsYsM/VGomIdA8J2TERj0tI2hcVxWY="}
+Redirected to http://goo.local/
+Completed in 3ms (DB: 0) | 302 Found [http://goo.local/count/async_increment]
+Starting Nanite mapper on Passenger...
+
+
+Processing CountsController#create to js (for 127.0.0.1 at 2009-10-05 05:07:23) [POST]
+  [4;36;1mCount Load (0.6ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+
+
+Processing CountsController#create to js (for 127.0.0.1 at 2009-10-05 05:07:23) [POST]
+  [4;35;1mCount Update (0.4ms)[0m   [0mUPDATE "counts" SET "total" = 42, "updated_at" = '2009-10-04 21:07:23' WHERE "id" = 1[0m
+  [4;36;1mCount Load (0.6ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Completed in 36ms (View: 1, DB: 1) | 200 OK [http://goo.local/count.js]
+Finished increment => nanite-counter-gandalf-0{"total":42}
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 05:07:23) [GET]
+  [4;36;1mCount Load (0.9ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 53ms (View: 45, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 05:07:24) [GET]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+  [4;35;1mCount Update (1000.8ms)[0m   [0mUPDATE "counts" SET "total" = 42, "updated_at" = '2009-10-04 21:07:23' WHERE "id" = 1[0m
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://goo.local/]
+Completed in 1013ms (View: 1, DB: 1001) | 200 OK [http://goo.local/count.js]
+Finished increment => nanite-counter-gandalf-0{"total":42}
+
+
+Processing CountsController#schedule (for 127.0.0.1 at 2009-10-05 05:07:27) [PUT]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"BwgZgQ0AEAw6JKsYsM/VGomIdA8J2TERj0tI2hcVxWY=", "count"=>{"interval"=>"60"}}
+
+RuntimeError (eventmachine not initialized: evma_send_data_to_connection):
+  eventmachine (0.12.8) lib/em/connection.rb:216:in `send_data'
+  eventmachine (0.12.8) lib/em/connection.rb:216:in `send_data'
+  amqp (0.6.0) lib/amqp/client.rb:120:in `send'
+  amqp (0.6.0) lib/mq.rb:240:in `send'
+  amqp (0.6.0) lib/mq.rb:237:in `each'
+  amqp (0.6.0) lib/mq.rb:237:in `send'
+  amqp (0.6.0) lib/mq.rb:236:in `synchronize'
+  amqp (0.6.0) lib/mq.rb:236:in `send'
+  eventmachine (0.12.8) lib/em/deferrable.rb:46:in `call'
+  eventmachine (0.12.8) lib/em/deferrable.rb:46:in `callback'
+  amqp (0.6.0) lib/mq.rb:235:in `send'
+  amqp (0.6.0) lib/mq/exchange.rb:261:in `publish'
+  eventmachine (0.12.8) lib/em/deferrable.rb:46:in `call'
+  eventmachine (0.12.8) lib/em/deferrable.rb:46:in `callback'
+  amqp (0.6.0) lib/mq/exchange.rb:246:in `publish'
+  amqp (0.6.0) lib/mq/queue.rb:348:in `publish'
+  nanite (0.4.1.2) lib/nanite/cluster.rb:70:in `publish'
+  nanite (0.4.1.2) lib/nanite/mapper.rb:200:in `send_request'
+  nanite (0.4.1.2) lib/nanite/mapper.rb:186:in `request'
+  nanite (0.4.1.2) lib/nanite.rb:59:in `request'
+  app/controllers/counts_controller.rb:23:in `schedule'
+  /opt/local/src/passenger/lib/phusion_passenger/rack/request_handler.rb:95:in `process_request'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:378:in `start_request_handler'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:336:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/utils.rb:183:in `safe_fork'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:163:in `start'
+  /opt/local/src/passenger/lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /opt/local/src/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (36.5ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+Starting Nanite mapper on Passenger...
+
+
+Processing CountsController#schedule (for 127.0.0.1 at 2009-10-05 05:07:38) [PUT]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"BwgZgQ0AEAw6JKsYsM/VGomIdA8J2TERj0tI2hcVxWY=", "count"=>{"interval"=>"60"}}
+Redirected to http://goo.local/
+Completed in 8ms (DB: 0) | 302 Found [http://goo.local/count/schedule]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 05:07:38) [GET]
+  [4;36;1mCount Load (0.8ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 46ms (View: 40, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#schedule (for 127.0.0.1 at 2009-10-05 05:07:49) [PUT]
+  Parameters: {"commit"=>"Increment", "authenticity_token"=>"BwgZgQ0AEAw6JKsYsM/VGomIdA8J2TERj0tI2hcVxWY=", "count"=>{"interval"=>"60"}}
+Redirected to http://goo.local/
+Completed in 2ms (DB: 0) | 302 Found [http://goo.local/count/schedule]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 05:07:49) [GET]
+  [4;35;1mCount Load (0.8ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 16ms (View: 8, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#create to js (for 127.0.0.1 at 2009-10-05 05:08:48) [POST]
+  [4;36;1mCount Load (0.7ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+  [4;35;1mCount Update (0.6ms)[0m   [0mUPDATE "counts" SET "total" = 43, "updated_at" = '2009-10-04 21:08:48' WHERE "id" = 1[0m
+Completed in 22ms (View: 1, DB: 1) | 200 OK [http://goo.local/count.js]
+
+
+Processing CountsController#create to js (for 127.0.0.1 at 2009-10-05 05:08:50) [POST]
+  [4;36;1mCount Load (0.7ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+  [4;35;1mCount Update (0.5ms)[0m   [0mUPDATE "counts" SET "total" = 44, "updated_at" = '2009-10-04 21:08:50' WHERE "id" = 1[0m
+Completed in 15ms (View: 1, DB: 1) | 200 OK [http://goo.local/count.js]
+
+
+Processing CountsController#index (for 127.0.0.1 at 2009-10-05 05:08:57) [GET]
+  [4;36;1mCount Load (0.6ms)[0m   [0;1mSELECT * FROM "counts" LIMIT 1[0m
+Rendering counts/index
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://goo.local/]
+
+
+Processing CountsController#create to js (for 127.0.0.1 at 2009-10-05 05:09:48) [POST]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+  [4;36;1mCount Update (0.5ms)[0m   [0;1mUPDATE "counts" SET "total" = 45, "updated_at" = '2009-10-04 21:09:48' WHERE "id" = 1[0m
+Completed in 47ms (View: 1, DB: 1) | 200 OK [http://goo.local/count.js]
+
+
+Processing CountsController#create to js (for 127.0.0.1 at 2009-10-05 05:09:50) [POST]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+  [4;36;1mCount Update (0.4ms)[0m   [0;1mUPDATE "counts" SET "total" = 46, "updated_at" = '2009-10-04 21:09:50' WHERE "id" = 1[0m
+Completed in 11ms (View: 1, DB: 1) | 200 OK [http://goo.local/count.js]
+
+
+Processing CountsController#create to js (for 127.0.0.1 at 2009-10-05 05:10:48) [POST]
+  [4;35;1mCount Load (0.7ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+  [4;36;1mCount Update (0.5ms)[0m   [0;1mUPDATE "counts" SET "total" = 47, "updated_at" = '2009-10-04 21:10:48' WHERE "id" = 1[0m
+Completed in 15ms (View: 1, DB: 1) | 200 OK [http://goo.local/count.js]
+
+
+Processing CountsController#create to js (for 127.0.0.1 at 2009-10-05 05:10:49) [POST]
+  [4;35;1mCount Load (0.8ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+  [4;36;1mCount Update (0.4ms)[0m   [0;1mUPDATE "counts" SET "total" = 48, "updated_at" = '2009-10-04 21:10:49' WHERE "id" = 1[0m
+Completed in 13ms (View: 1, DB: 1) | 200 OK [http://goo.local/count.js]
+
+
+Processing CountsController#create to js (for 127.0.0.1 at 2009-10-05 05:11:48) [POST]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+  [4;36;1mCount Update (0.5ms)[0m   [0;1mUPDATE "counts" SET "total" = 49, "updated_at" = '2009-10-04 21:11:48' WHERE "id" = 1[0m
+Completed in 11ms (View: 1, DB: 1) | 200 OK [http://goo.local/count.js]
+
+
+Processing CountsController#create to js (for 127.0.0.1 at 2009-10-05 05:11:50) [POST]
+  [4;35;1mCount Load (77.1ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+  [4;36;1mCount Update (0.5ms)[0m   [0;1mUPDATE "counts" SET "total" = 50, "updated_at" = '2009-10-04 21:11:50' WHERE "id" = 1[0m
+Completed in 91ms (View: 1, DB: 78) | 200 OK [http://goo.local/count.js]
+
+
+Processing CountsController#create to js (for 127.0.0.1 at 2009-10-05 05:12:48) [POST]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+  [4;36;1mCount Update (0.5ms)[0m   [0;1mUPDATE "counts" SET "total" = 51, "updated_at" = '2009-10-04 21:12:48' WHERE "id" = 1[0m
+Completed in 12ms (View: 1, DB: 1) | 200 OK [http://goo.local/count.js]
+
+
+Processing CountsController#create to js (for 127.0.0.1 at 2009-10-05 05:12:50) [POST]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+  [4;36;1mCount Update (0.4ms)[0m   [0;1mUPDATE "counts" SET "total" = 52, "updated_at" = '2009-10-04 21:12:50' WHERE "id" = 1[0m
+Completed in 11ms (View: 1, DB: 1) | 200 OK [http://goo.local/count.js]
+
+
+Processing CountsController#create to js (for 127.0.0.1 at 2009-10-05 05:13:48) [POST]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+  [4;36;1mCount Update (0.5ms)[0m   [0;1mUPDATE "counts" SET "total" = 53, "updated_at" = '2009-10-04 21:13:48' WHERE "id" = 1[0m
+Completed in 10ms (View: 1, DB: 1) | 200 OK [http://goo.local/count.js]
+
+
+Processing CountsController#create to js (for 127.0.0.1 at 2009-10-05 05:13:50) [POST]
+  [4;35;1mCount Load (0.9ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+  [4;36;1mCount Update (0.5ms)[0m   [0;1mUPDATE "counts" SET "total" = 54, "updated_at" = '2009-10-04 21:13:50' WHERE "id" = 1[0m
+Completed in 16ms (View: 1, DB: 1) | 200 OK [http://goo.local/count.js]
+
+
+Processing CountsController#create to js (for 127.0.0.1 at 2009-10-05 05:14:48) [POST]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+  [4;36;1mCount Update (0.5ms)[0m   [0;1mUPDATE "counts" SET "total" = 55, "updated_at" = '2009-10-04 21:14:48' WHERE "id" = 1[0m
+Completed in 12ms (View: 1, DB: 1) | 200 OK [http://goo.local/count.js]
+
+
+Processing CountsController#create to js (for 127.0.0.1 at 2009-10-05 05:14:50) [POST]
+  [4;35;1mCount Load (0.7ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+  [4;36;1mCount Update (0.5ms)[0m   [0;1mUPDATE "counts" SET "total" = 56, "updated_at" = '2009-10-04 21:14:50' WHERE "id" = 1[0m
+Completed in 12ms (View: 1, DB: 1) | 200 OK [http://goo.local/count.js]
+
+
+Processing CountsController#create to js (for 127.0.0.1 at 2009-10-05 05:15:49) [POST]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+  [4;36;1mCount Update (0.5ms)[0m   [0;1mUPDATE "counts" SET "total" = 57, "updated_at" = '2009-10-04 21:15:49' WHERE "id" = 1[0m
+Completed in 12ms (View: 1, DB: 1) | 200 OK [http://goo.local/count.js]
+
+
+Processing CountsController#create to js (for 127.0.0.1 at 2009-10-05 05:15:50) [POST]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+  [4;36;1mCount Update (0.4ms)[0m   [0;1mUPDATE "counts" SET "total" = 58, "updated_at" = '2009-10-04 21:15:50' WHERE "id" = 1[0m
+Completed in 15ms (View: 1, DB: 1) | 200 OK [http://goo.local/count.js]
+
+
+Processing CountsController#create to js (for 127.0.0.1 at 2009-10-05 05:16:49) [POST]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+  [4;36;1mCount Update (0.6ms)[0m   [0;1mUPDATE "counts" SET "total" = 59, "updated_at" = '2009-10-04 21:16:49' WHERE "id" = 1[0m
+Completed in 11ms (View: 1, DB: 1) | 200 OK [http://goo.local/count.js]
+
+
+Processing CountsController#create to js (for 127.0.0.1 at 2009-10-05 05:16:50) [POST]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+  [4;36;1mCount Update (0.5ms)[0m   [0;1mUPDATE "counts" SET "total" = 60, "updated_at" = '2009-10-04 21:16:50' WHERE "id" = 1[0m
+Completed in 12ms (View: 1, DB: 1) | 200 OK [http://goo.local/count.js]
+
+
+Processing CountsController#create to js (for 127.0.0.1 at 2009-10-05 05:17:49) [POST]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+  [4;36;1mCount Update (0.4ms)[0m   [0;1mUPDATE "counts" SET "total" = 61, "updated_at" = '2009-10-04 21:17:49' WHERE "id" = 1[0m
+Completed in 9ms (View: 1, DB: 1) | 200 OK [http://goo.local/count.js]
+
+
+Processing CountsController#create to js (for 127.0.0.1 at 2009-10-05 05:17:50) [POST]
+  [4;35;1mCount Load (0.6ms)[0m   [0mSELECT * FROM "counts" LIMIT 1[0m
+  [4;36;1mCount Update (0.5ms)[0m   [0;1mUPDATE "counts" SET "total" = 62, "updated_at" = '2009-10-04 21:17:50' WHERE "id" = 1[0m
+Completed in 12ms (View: 1, DB: 1) | 200 OK [http://goo.local/count.js]
